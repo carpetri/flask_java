@@ -14,7 +14,7 @@ public class Pipe {
 
         ExObject o1 = new ExObject("one",3.2);
         ExObject o2 = new ExObject("two",2.124);
-        SparkConf conf = new SparkConf();
+        SparkConf conf = new SparkConf().setAppName("Pipe").setMaster("local");
         JavaSparkContext sc = new JavaSparkContext(conf);
 
         String pyScript = "script.py";
